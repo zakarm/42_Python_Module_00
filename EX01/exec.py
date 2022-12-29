@@ -12,22 +12,26 @@
 
 import sys
 
+def swap_case(string):
+    swapped_string = ""
+    for ch in string:
+        if ch.isupper():
+            swapped_string += ch.lower()
+        elif ch.islower():
+            swapped_string += ch.upper()
+        else:
+            swapped_string += ch
+    return swapped_string
+
 def reverse_strings(string) :
     data = ""
-    len_s = len(string)
-    while (len_s > 0):
-        data += string[len_s - 1]
-        len_s = len_s - 1
-    print(data)
+    for i in range(len(string) - 1, -1, -1):
+        data += string[i]
+    print(swap_case(data))
 
 def main() :
-    i = 1
-    concat = ""
-    if (len(sys.argv) >= 2) :
-        while (i < len(sys.argv)):
-            concat += sys.argv[i]
-            concat +=  " "
-            i = i + 1;
+    if len(sys.argv) >= 2:
+        concat = " ".join(sys.argv[1:])
         reverse_strings(concat)
 
 if __name__ == "__main__":
