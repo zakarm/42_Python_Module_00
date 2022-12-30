@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    count.py                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: zmrabet <zmrabet>                          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/12/30 11:46:06 by zmrabet           #+#    #+#              #
+#    Updated: 2022/12/30 11:46:06 by zmrabet          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 import sys
 import string 
 
@@ -26,6 +38,8 @@ def text_analyzer(string_c) :
 def main():
     if (len(sys.argv) == 2):
         text_analyzer(sys.argv[1])
+    elif (len(sys.argv) > 2):
+        print("AssertionError: more than one argument are provided")
 
 if __name__ == "__main__" :
     main()
