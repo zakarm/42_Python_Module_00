@@ -6,7 +6,7 @@
 #    By: zmrabet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/04 16:49:04 by zmrabet           #+#    #+#              #
-#    Updated: 2023/01/04 18:11:54 by zmrabet          ###   ########.fr        #
+#    Updated: 2023/01/05 14:29:28 by zmrabet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,10 +97,12 @@ def main():
             print_recipe_details(recipe)
         elif (val == '4') :
             print_all()
+        elif (val == '5'):
+            print("Cookbook closed. Goodbye !")
+            break
         else :
-            break;
+            print("Sorry, this option does not exist.")
+            break
         
-
-    
 if __name__ == "__main__" :
     main()
